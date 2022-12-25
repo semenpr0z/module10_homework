@@ -21,9 +21,12 @@ const websocket = new WebSocket(API);
 // кнопка отправки сообщения
 btnSend.addEventListener('click', () => {
     let massege = inputText.value;
-    websocket.send(massege);
-    writeToScreen(`Вы: ${massege}`);
-	inputText.value = '';
+    if (massege == "") {
+        errorText.innerHTML = "Нельзя отправить пустое сообщение"
+    }else {
+        websocket.send(massege);
+        writeToScreen(`Вы: ${massege}`);
+        inputText.value = '';}
 });
 
 // функция выведения сообщения
