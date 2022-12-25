@@ -9,3 +9,5 @@ function getScreen() {
     let screenHeight = window.screen.height;
     window.alert(`Ширина экрана: ${screenWidth}, а высота экрана: ${screenHeight}`)
 }
+
+//в задании было написано вывод через alert и гиперссылка на описание этой функции, так же надо было сделать?)
